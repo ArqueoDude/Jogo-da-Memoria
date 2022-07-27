@@ -39,10 +39,19 @@ function createCardFace(face, card, element) {
     if (face === FRONT){
         let iconElement = document.createElement('img');
         iconElement.classList.add(ICON);
-        iconElement.src = "./assets/images/" + card.icon + ".jpg";
+        iconElement.src = "./assets/front/" + card.icon + ".jpg";
+        iconElement.style.width = '95%';
+        iconElement.style.height = '95%';
+        iconElement.style.borderRadius = '20px';
         cardElementFace.appendChild(iconElement);
     } else {
-        cardElementFace.innerHTML = "&lt/&gt";
+        let iconElement = document.createElement('img');
+        iconElement.classList.add(ICON);
+        iconElement.src = "./assets/back/casa-dog.jpg";
+        iconElement.style.width = '100%';
+        iconElement.style.height = '100%';
+        iconElement.style.borderRadius = '20px';
+        cardElementFace.appendChild(iconElement);
     }
     element.appendChild(cardElementFace);
 }

@@ -15,6 +15,10 @@ let game = {
     'golden-retriever',
     'poodle'],
 
+    // back: [
+    //     'casa-dog'
+    // ],
+
     setCard: function (id) {
 
         let card = this.cards.filter(card => card.id === id) [0];
